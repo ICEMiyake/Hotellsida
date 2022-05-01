@@ -1,0 +1,39 @@
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto auto 1fr;
+  grid-template-areas: "header header" "nav nav" "section section"
+  "aside aside" "footer footer";
+  grid-gap: 0.5rem 1rem;
+}
+
+ @media screen and (min-width: 600px) {
+   body{
+   grid-template-areas: "header header" "nav nav" "section aside" "footer footer";
+   grid-gap: 1rem 2rem;
+
+ }
+}
+
+header {
+  grid-area: header;
+}
+
+nav{
+  background-color: green;
+  grid-area: nav;
+}
+
+section{
+  grid-area: section;
+}
+
+article{
+  background-color: white;
+  grid-area: article;
+}
+
+aside{
+  background-color: white;
+  grid-area: aside;
+}
